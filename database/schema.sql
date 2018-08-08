@@ -26,17 +26,17 @@ CREATE TABLE product_images (
 
 SET GLOBAL local_infile = 'ON';
 
-LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/products.csv' INTO TABLE products
+LOAD DATA LOCAL INFILE './products.csv' INTO TABLE products
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/product_images.csv' INTO TABLE product_images
+LOAD DATA LOCAL INFILE './product_images.csv' INTO TABLE product_images
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/images.csv' INTO TABLE images
+LOAD DATA LOCAL INFILE './images.csv' INTO TABLE images
 FIELDS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
