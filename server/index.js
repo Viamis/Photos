@@ -29,19 +29,19 @@ app.get('/images/:id/product_info', (req, res) => {
   });
 });
 
-app.post('/', (req, res) => {
+app.post('/post', (req, res) => {
   db.createProduct(req.body.name, req.body.detail, req.body.img_path, req.body.pi, req.body.ii, (data) => {
     res.sendStatus(201);
   });
 });
 
-app.put('/', (req, res) => {
+app.put('/update', (req, res) => {
   db.updateProduct(req.body.name, req.body.detail, req.body.id, req.body.pi, req.body.ii, (data) => {
     res.status(201).send();
   });
 });
 
-app.delete('/', (req, res) => {
+app.delete('/delete', (req, res) => {
   db.deleteProduct(req.body.id, (data) => {
     res.status(200).send();
   });
