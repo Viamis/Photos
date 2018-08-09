@@ -33,3 +33,11 @@
     ```sh
     npm install
     ```
+
+## REST API
+  
+  > CREATE - /post - adds new product name, detail, and image.
+  > READ - /images/:id/images - reads product's images by product id.
+         - /images/:id/product_info - reads product's info by product id.
+  > UPDATE - /update - update existing product's name, detail and image with it's product id.
+  > DELETE - /delete - delete product with it's product id.
